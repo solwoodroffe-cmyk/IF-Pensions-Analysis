@@ -15,8 +15,6 @@ This repository contains complementary R analyses of UK public service pension p
 #### NHS Pensions (FOI Data)
 - **NHS_Pensioners_Analysis.R** - Total NHS pensioners over time (2015-2024)
 - **NHS_Pensioners_Over_100k.R** - NHS pensioners earning over £100,000 (2015-2024)
-- **NHS_Pensioners_By_Salary_Bracket.R** - NHS pensioners by income bracket (2015-2024)
-- **NHS_Pensioners_By_Earnings_Threshold.R** - NHS pensioners by earnings threshold (2015-2024)
 
 ### Data
 - **CSV ONS Public Service Pensions Payment.csv** - ONS data source (1998-2025 with quarterly and monthly breakdowns)
@@ -27,8 +25,6 @@ This repository contains complementary R analyses of UK public service pension p
 - **Public_Service_Pensions_Per_WorkingAge.png** - Per working-age adult chart
 - **NHS_Pensioners_Over_Time.png** - Total NHS pensioners chart
 - **NHS_Pensioners_Over_100k.png** - High-earning NHS pensioners chart
-- **NHS_Pensioners_By_Salary_Bracket.png** - Multi-line chart by bracket
-- **NHS_Pensioners_By_Earnings_Threshold.png** - Cumulative threshold analysis
 
 ## Data Sources
 
@@ -147,42 +143,7 @@ This script isolates the **high-earning NHS pensioners** (£100,000+) to show th
 - Total increase: **745.3%**
 - Highlights the particularly rapid growth in high-earning pensioner numbers
 
-### NHS Pensioners by Salary Bracket
-**File**: `NHS_Pensioners_By_Salary_Bracket.R`
 
-This script displays **three separate lines**, one for each salary bracket, to compare growth rates across income groups.
-
-**Output**:
-- Multi-line chart with three lines (£33-50k, £50-100k, £100k+)
-- Shows independent growth trajectories for each bracket
-- Legend identifies each bracket
-- PNG output: 30×20 cm, 300 dpi
-
-**Key Findings**:
-- £33k-£50k: Growing steadily (~105% increase)
-- £50k-£100k: Accelerating growth (~154% increase)
-- £100k+: Exponential growth (~745% increase)
-- Demonstrates wealth concentration among NHS pensioners
-
-### NHS Pensioners by Earnings Threshold
-**File**: `NHS_Pensioners_By_Earnings_Threshold.R`
-
-This script uses a **cumulative threshold approach**, showing:
-- All pensioners (Over £33k)
-- High earners (Over £50k)
-- Very high earners (Over £100k)
-
-**Output**:
-- Multi-line cumulative threshold chart
-- Shows how many pensioners cross each earnings level
-- Growth rates calculated for each threshold
-- PNG output: 30×20 cm, 300 dpi
-
-**Key Findings**:
-- Over £33k: 32,449 → 71,578 (+120.5%)
-- Over £50k: 15,469 → 39,285 (+154.0%)
-- Over £100k: 223 → 1,885 (+745.3%)
-- Reveals accelerating growth at higher earnings levels
 
 ---
 
@@ -200,12 +161,11 @@ The different growth rates (153.7% vs 116.1%) reflect population changes over th
 The NHS pension analyses reveal:
 
 1. **Total Growth**: NHS pensioner numbers have more than doubled in a decade (120.5% increase)
-2. **Disproportionate High-Earner Growth**: The £100k+ earners have grown nearly 8-fold (745%), while lower brackets grow 100-150%
-3. **Wealth Concentration**: An increasing proportion of NHS pensioners are earning very high pensions
-4. **Policy Implications**: The rapid growth in high-earning pensioners may indicate either:
-   - More senior staff retiring
+2. **Disproportionate High-Earner Growth**: The £100k+ earners have grown nearly 8-fold (745%), a much faster rate than the overall growth
+3. **Policy Implications**: The rapid growth in high-earning pensioners may indicate:
+   - More senior staff retiring with higher pensions
    - Pension scheme increases outpacing inflation
-   - Changes in pension eligibility or calculation
+   - Changes in pension eligibility or calculation methods
 
 ## Code Features
 
